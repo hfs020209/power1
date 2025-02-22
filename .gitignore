@@ -1,0 +1,15 @@
+*.o
+*.hex
+*.d
+*.crf
+*.axf
+*.map
+*.htm
+*.lnp
+*.sct
+*.dep
+*.lst
+*.scvd
+*.iex
+
+MDK-ARM/RCE16_ZD_MCU/

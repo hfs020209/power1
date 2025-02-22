@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -39,6 +39,30 @@ extern "C" {
 void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN Prototypes */
+
+/********************************************************
+  * 函数功能: LED引脚操作
+  * 输入参数: void
+  * 返 回 值: 无
+  * 说    明: 控制IO电平
+********************************************************/
+void rc_led_state(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, uint8_t led_vaule);
+
+/********************************************************
+  * 函数功能: 硬件看门狗喂狗
+  * 输入参数: void
+  * 返 回 值: 无
+  * 说    明: 定时翻转引脚喂狗
+********************************************************/
+void rc_wdi_heard(void);
+
+/********************************************************
+  * 函数功能: 获取CAN_ID编码值
+  * 输入参数: void
+  * 返 回 值: 无
+  * 说    明: 根据io输入状态获取编码值
+********************************************************/
+uint8_t rc_coder_get(void);
 
 /* USER CODE END Prototypes */
 
